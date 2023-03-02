@@ -1,10 +1,17 @@
+import { exampleProducts } from '@docs-repro/products';
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'docs-repro-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'myorg-root',
+  template: `
+    <myorg-banner title="Welcome to the store!"> </myorg-banner>
+    <ul>
+      <li *ngFor="let product of products">
+        <strong>{{ product.name }}</strong> Price: {{ product.price }}
+      </li>
+    </ul>
+  `,
 })
 export class AppComponent {
-  title = 'store';
+  products = exampleProducts;
 }

@@ -1,10 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'docs-repro-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  selector: 'myorg-root',
+  template: `
+    <myorg-banner title="Welcome to our admin app."> </myorg-banner>
+  `,
 })
-export class AppComponent {
-  title = 'admin';
-}
+export class AppComponent {}
